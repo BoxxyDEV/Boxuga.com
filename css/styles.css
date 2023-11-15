@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    background-color: #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    color: white;
+    margin-top: 40px;
+    padding: 50px;
+}
+
+main a {
+    color: white;
+}
+
+.hyperlinkbtns {
+    text-align: center;
+    line-height: 20px;
+}
+
+.hyperlinkbtns a {
+    white-space:nowrap;
+    padding: 5px;
+    border-radius: 45px;
+    background-color: transparent;
+    border: white 1px solid;
+    color: white;
+    font-size: smaller;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    max-height: 100px;
+}
+
+.hyperlinkbtns a:hover {
+    background-color: white;
+    color: #000;
+    cursor:default;
+}
+
+header {
+    background-color: #343840;
+    position:fixed;
+    right: 50px;
+    left: 50px;
+    top: 25px;
+    display: flex;
+    z-index: 99;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+
+#createddate {
+    font-size: small;
+}
+
+
+header, nav {
+    
+    border-radius: 25px;
+    
+}
+
+#contentmodpage {
+    text-align: center;
+    background-color: #000;
+    max-width: 900px;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin: 100px auto;
+}
+
+#contentmodpage iframe {
+    border-radius: 25px;
+}
+
+header nav {
+    position: fixed;
+    right:50px;
+}
+
+header img {
+    border-radius: 25px;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    flex-direction: row-reverse;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #343840;
+}
+
+.items {
+    display: flex;
+    overflow-y: hidden;
+}
+
+.item {
+    border: 1px solid white;
+    padding:15px;
+    border-radius: 10px;
+    max-width: 240px;
+    margin-right: 20px;
+    height: 300px;
+}
+
+.item .createdtext {
+    font-size: x-small;
+    font-style: italic;
+}
+
+.item .descriptiontext {
+    font-size: small;
+}
+
+.items a {
+    text-decoration: none;
+}

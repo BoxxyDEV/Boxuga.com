@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hedgehog Menu 1.27 | Boxuga</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+
+        #coolimage {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-image: url(/images/screenshots/hedgehogmenuscriptps3xbox127.png);
+            filter: blur(10px);
+            background-size: cover;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="coolimage"> <!-- Propbaly not the best way to do it but yeah -->
+    </div>
+    <header>
+        <a href="/"><img src="/images/boxugalogo.png" alt="Site Logo" width="58" height="47"></a>
+        <nav>
+            <div>
+            <p>
+                <a href="/mods/">My Mods</a>
+                <a href="/about/">About</a>
+            </p>
+            </div>
+        </nav>
+    </header>
+    <main id="contentmodpage">
+        <h1>Hedgehog Script Menu (1.27)</h1>
+        <p id="createddate">Created: 14/11/2021 | Updated: 2/7/2022 | Downloads: <span id="downloadcounter"></span></p>
+        <p>DISCLAIMER - This has not been worked on in about a year. this is really buggy because dumb choices. This was just a fun little project. I would just use James Reborn Modloader if on PlayStation 3</p>
+        <div class="hyperlinkbtns">
+            <a href="https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/3.0/Hedgehog.Menu.V3.-.Xbox.360.zip">Xbox 360</a>
+            <a href="https://github.com/BoxxyDEV/Boxuga-ModLoader/releases/download/3.0/Hedgehog.Menu.-.PlayStation.3.zip">PlayStation 3</a>
+            <a href="https://github.com/BoxxyDEV/Boxuga-ModLoader">Source Code</a>
+        </div>
+        <p>&nbsp;</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kQZZWB2RShc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: none;"></iframe>
+    </main>
+    <script>
+        var downloadcount = 0;
+        var downloadcounter = document.getElementById("downloadcounter");
+        function grabDownloadCount()
+        {
+            githubassets = JSON.parse(githubapi.responseText);
+            for (i = 0; i < githubassets.length; i++)
+            {
+                try {
+                    for (a = 0; a < githubassets[i].assets.length; a++)
+                    {
+                        downloadcount += githubassets[i].assets[a].download_count;
+                    }
+                } 
+                catch (error) {
+                    downloadcount = 0;
+                }
+                
+            }
+            downloadcounter.innerText = downloadcount;
+        }
+
+        var githubapi = new XMLHttpRequest();
+        githubapi.addEventListener("load", grabDownloadCount);
+        githubapi.open("GET", "https://api.github.com/repos/BoxxyDEV/Boxuga-Modloader/releases");
+        githubapi.send();
+    </script>
+</body>
+</html>
