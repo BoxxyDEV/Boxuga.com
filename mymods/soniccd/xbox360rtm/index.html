@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="author" content="Boxuga">
+    <meta name="keywords" content="GTA 5, Modding, PS3, CFW, 3TA, GTA Online, 1.12, 1.28, 1.27, Boxuga, BoxxyMC, manminecraft, manminecraft109">
+    <meta name="title" content="Boxuga's Sonic CD RTM Tool for Xbox 360">
+    <meta name="description" content="This Sonic CD RTM Tool lets you mod your stats on Sonic CD.">
+    <title>Sonic CD RTM Tool | Boxuga</title>
+    <style>
+        main {
+            text-align: center;
+        }
+
+        ol li {
+            list-style-position: inside;
+        }
+    </style>
+</head>
+<body>
+    <div id="coolimage">
+    </div>
+    <header>
+        <a href="/"><img src="/images/boxugalogo.png" alt="Site Logo" width="58" height="47"></a>
+        <nav>
+            <div>
+            <p>
+                <a href="/mymods/">Mods</a>
+                <a href="/about/">About</a>
+            </p>
+            </div>
+        </nav>
+    </header>
+    <main id="contentmodpage">
+        <h1>Sonic CD RTM Tool (Xbox 360)</h1>
+        <p id="createddate">Created: 29/11/2022 | Updated: 11/2/2023 | Downloads: <span id="downloadcounter">0</span></p>
+        <p>an RTM Tool for Sonic CD on the Xbox 360. This tool lets you edit your lives, rings, & score.</p>
+        <div class="hyperlinkbtns">
+            <a href="https://github.com/BoxxyDEV/SonicCD-RTM-Tool-Xbox360RGH/releases">Download</a>
+            <a href="https://github.com/BoxxyDEV/SonicCD-RTM-Tool-Xbox360RGH">Source Code</a>
+        </div>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5klCOcOTvFQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: none;"></iframe>
+    </main>
+    <script>
+        var downloadcount = 0;
+        var downloadcounter = document.getElementById("downloadcounter");
+        function grabDownloadCount()
+        {
+            githubassets = JSON.parse(githubapi.responseText);
+            for (i = 0; i < githubassets.length; i++)
+            {
+                try {
+                    downloadcount += githubassets[i].assets[0].download_count;
+                } 
+                catch (error) {
+                    downloadcount = 0;
+                }
+                
+            }
+            downloadcounter.innerText = downloadcount;
+        }
+
+        var githubapi = new XMLHttpRequest();
+        githubapi.addEventListener("load", grabDownloadCount);
+        githubapi.open("GET", "https://api.github.com/repos/BoxxyDEV/SonicCD-RTM-Tool-Xbox360RGH/releases");
+        githubapi.send();
+    </script>
+</body>
+</html>
