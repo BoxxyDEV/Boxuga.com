@@ -2,4 +2,4 @@
 
 
 # Credits
-[nomalize.css by necolas](github.com/necolas/normalize.css)
+[nomalize.css by necolas](https://github.com/necolas/normalize.css)
