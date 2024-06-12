@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="author" content="Boxuga">
+    <meta name="keywords" content="GTA 5, Modding, PS3, CFW, 3TA, GTA Online, 1.12, 1.28, 1.27, Boxuga, BoxxyMC, manminecraft, manminecraft109">
+    <meta name="title" content="Boxuga's Website">
+    <meta name="description" content="A bad website made by Boxuga">
+    <title>Boxuga</title>
+    <style>
+        main {
+            text-align: center;
+            z-index: 98;
+            
+        }
+        body {
+            animation: epicanim 30s linear 0s infinite normal;
+        }
+
+        @keyframes epicanim {
+            0% {
+                background-color: rgb(0, 0, 0);
+            }
+            25% {
+                background-color: rgb(71, 255, 95);
+            }
+            50% {
+                background-color: rgb(76, 11, 255);
+            }
+            75% {
+                background-color: rgb(255, 68, 68);
+            }
+            100% {
+                background-color: rgb(0, 0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/boxugalogo.png" alt="Site Logo" width="58" height="47">
+        </a>
+        <nav>
+            <p>
+                <a href="mymods/">My Mods</a>
+                <a href="about/">About</a>
+            </p>
+        </nav>
+    </header>
+    <main id="contentmodpage">
+        <h1 id="mainh1">Welcome to Boxuga's website</h1>
+        
+    </main>
+</body>
+<script>
+    var mainh1 = document.getElementById('mainh1');
+    var subtext = document.getElementById('subtext');
+    var path = document.location.pathname.toLowerCase();
+    if (path.slice(0, 23) = "/showcasedmods/scorpion")
+    {
+        document.location = "/showcasedmods/ps3/gtav/scorpion"; // I used to store it on boxuga.com/showcasedmods/scorpion/index.html but i want to have lots and have it catagorized so I've moved it to /showcasedmods/ps3/gtav/scorpion.
+    }
+    else
+    {
+        mainh1.textContent = "Sorry This page does not exist matey!";
+    }
+    
+</script>
+</html>
